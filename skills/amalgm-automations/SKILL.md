@@ -10,7 +10,7 @@ workflow into one durable Amalgm automation and verify what actually ran.
 Automations owns configuration and permanent run history; the selected Amalgm
 machine executes the workflow.
 
-Amalgm Automations is free. Guide the person through Google sign-in and computer
+Amalgm Automations is free during launch. Guide the person through Google sign-in and computer
 approval when needed; do not introduce a payment step. A native agent or other
 external service still uses its own account and may have its own usage costs.
 
@@ -85,6 +85,13 @@ id, get and repair that draft with `update`; do not create a replacement.
 
 Use a finite `maxOccurrences` when the user's request is bounded. Do not turn
 "ten times" into an unbounded schedule plus a future cleanup promise.
+Use standard five-field cron; the finest interval is one minute. Seconds and
+cron macros are rejected. Account limits are 10 configuration API writes and
+10 new runs per minute, shared by every client and trigger, with at most 100
+unfinished runs. One complete create with a schedule and workflow uses four
+writes. On HTTP 429, wait for `Retry-After` (or 60 seconds if unavailable), then
+repair an identified draft or retry the same delivery key; never create a new
+definition or key to evade the limit. Accepted runs remain durable.
 
 Choose workflow lanes explicitly:
 
