@@ -1,0 +1,4 @@
+interface:
+  display_name: "Amalgm Automations"
+  short_description: "Set up, run, and troubleshoot Amalgm automations"
+  default_prompt: "Use $amalgm-automations to help me connect my account and create and verify an automation."
