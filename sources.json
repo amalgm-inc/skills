@@ -2,6 +2,6 @@
   "amalgm-automations": {
     "repository": "https://github.com/amalgm-inc/amalgm-automations.git",
     "path": "skills/amalgm-automations",
-    "commit": "28dd6ffe1d865bcb68b63a46b289d90b412cec7a"
+    "commit": "f025ee464a7316eb349101516f515c2fcfd9378d"
   }
 }

@@ -84,10 +84,9 @@ authorized connecting this computer. Do not invent a code, run a code-less
 `install.sh`, or use sudo as an automatic workaround. Keep the code private
 to this setup session.
 
-The web installer places Shell under
-`~/.amalgm/runtime-packages/shell/<installed-version>/bin/amalgm` on macOS/Linux.
-If it is absent from PATH, use the exact launcher/version identified by the
-installer or app, not whichever version directory happens to sort last.
+If `amalgm` is absent from PATH after the web installer runs, use the exact
+launcher identified by the installer or app. Do not pick a runtime by sorting
+version folders.
 
 ## Sign in and connect the computer
 

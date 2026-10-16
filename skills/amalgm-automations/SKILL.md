@@ -64,8 +64,8 @@ input.
 - Omit `targetId` in a machine-bound session. Never guess or copy an opaque
   target id. If the principal has multiple targets, let the service require an
   explicit user choice.
-- A process `cwd`, when supplied, must be absolute. If omitted, the selected
-  machine uses its documented default (normally that user's OS home).
+- A process `cwd`, when supplied, must be absolute. If omitted, the step runs
+  in that user's Workspaces folder on the selected machine.
 - Workflow `env` is persisted ordinary configuration, not a secret store.
   Never place Shell credentials or reusable service secrets in it.
 - Use `--stdin` for CLI payloads containing a webhook signing secret or
